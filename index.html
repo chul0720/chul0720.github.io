@@ -134,10 +134,17 @@
             top:700px;
             animation: star-shine 1.8s linear 0s infinite;
         }
-        #home .star-spin svg{
+        #home .star-spin01 svg{
             left:1340px;
             top:500px;
-            animation: star-spin 5s linear 0s infinite;
+            animation: star-spin01 5s linear 0s infinite;
+        }
+        #home .star-spin02 svg{
+            left:1100px;
+            top:850px;
+            width:150px;
+            height:150px;
+            animation: star-spin02 10s linear 0s infinite;
         }
 
         @keyframes star-shine {
@@ -151,7 +158,8 @@
                 opacity:1;
             }
         }
-        @keyframes star-spin {
+
+        @keyframes star-spin01 {
             0%{
                 rotate:0deg;
             }
@@ -160,6 +168,17 @@
                 rotate:360deg;
             }
         }
+
+        @keyframes star-spin02 {
+            0%{
+                rotate:360deg;
+            }
+            
+            100%{
+                rotate:0deg;
+            }
+        }
+
         #home .container{
             position:relative;
             z-index:10;
@@ -257,7 +276,7 @@
         
         
         #about{
-            padding-bottom:600px;
+            padding-bottom:400px;
             background:url(./images/background04.svg) no-repeat center;
             background-size:cover;
         }
@@ -298,6 +317,7 @@
             width:1200px;
             height:500px;
             padding:30px 30px;
+            margin-bottom:20px;
             border-radius:30px;
             background:#79c0f7cd;
         }
@@ -369,25 +389,35 @@
         .skills li:nth-child(6) .progress.active::after{
             width:60%;
         }
-
         .persent{
             font-family:'Hanbit';
             font-size:20px;
         }
-
+        .skills .txt-box{
+            width:1200px;
+            height:300px;
+            padding:30px 30px;
+            border-radius:30px;
+            background:#79c0f7cd;
+            text-align:center;
+            font-size:20px;
+        }
 
         #portfolio{
             position:relative;
-            padding-bottom:600px;
+            padding-bottom:50px;
             background:url(./images/background05.svg) no-repeat center;
             background-size:cover;
+        }
+        #portfolio .container{
+            text-align:center;
         }
         #portfolio ul{
             display:flex;
             flex-flow:wrap;
         }
         #portfolio article{
-            margin:200px 60px;
+            margin-bottom:300px;
         }
         #portfolio h3{
             width:1200px;
@@ -412,6 +442,9 @@
         }
         #portfolio p{
             margin:80px 0;
+        }
+        #portfolio .icon p{
+            margin:20px;
         }
         #portfolio a{font-family:'Hanbit';}
 
@@ -462,7 +495,7 @@
             height:100%;
             background:#71717149;
         }
-        #portfolio .popup-contents{
+        #portfolio .popup .popup-contents{
             position:relative;
             margin:0 auto;
             padding:30px;
@@ -470,7 +503,7 @@
             border-radius:30px;
             text-align:center;
         }
-        #portfolio .popup-contents .btn-close{
+        #portfolio .popup .popup-contents .btn-close{
             position:absolute;
             left:1150px;
             top:30px;
@@ -478,7 +511,7 @@
             height:50px;
             cursor:pointer;
         }
-        #portfolio .popup-contents .btn-close span{
+        #portfolio .popup .popup-contents .btn-close span{
             position:absolute;
             left:0;
             right:0;
@@ -487,12 +520,16 @@
             height:2px;
             background:#000;
         }
-        #portfolio .popup-contents .btn-close span:last-child{
+        #portfolio .popup .popup-contents .btn-close span:last-child{
             transform: translateY(-50%) rotate(-45deg);
         }
 
-        #portfolio .popup-contents img{
+        #portfolio .popup .popup-contents img{
             width:500px;
+            height:100%
+        }
+        #portfolio .popup-banner .popup-contents img{
+            width:1000px;
             height:100%
         }
 
@@ -556,19 +593,23 @@
         }
         
         .swiper{
-            width:800px;
+            width:1000px;
             height:700px;
             margin:0 auto;
             padding:0 80px;
         }
         .poster .swiper{
-            width:1200px;
+            width:1000px;
             height:550px;
+            padding:0;
         }
-        .web .swiper{
-            height:500px;
+        .banner .swiper{
+            width:1000px;
+            height:600px;
         }
-        
+        .pub .swiper{
+            width:1000px;
+        }
     </style>
 </head>
 <body>
@@ -616,7 +657,7 @@
                                 S50,89.667,50,89.667s-0.603-29.057-5.772-34.228S10,49.667,10,49.667s29.67-1.214,34.228-5.772S50,9.667,50,9.667z"/>
                         </svg>
                     </div>
-                    <div class="star-spin">
+                    <div class="star-spin01">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
                             <g>
@@ -677,6 +718,68 @@
                                     <path fill="#FCFFC2" d="M50.402,90.011l-2.713-1.091C36.982,106.356,30.64,128,30.105,149h3.131
                                         C33.771,128,39.966,106.983,50.402,90.011z"/>
                                 </g>
+                                
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-spin02">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="205px" height="203px" viewBox="0 0 205 203" style="enable-background:new 0 0 205 203;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#2D407A;stroke:#4255A5;stroke-miterlimit:10;}
+                                .st1{fill:url(#SVGID_1_);stroke:#4255A5;stroke-miterlimit:10;}
+                                .st2{fill:url(#SVGID_2_);stroke:#4255A5;stroke-miterlimit:10;}
+                                .st3{fill:url(#SVGID_3_);stroke:#4255A5;stroke-miterlimit:10;}
+                                .st4{fill:url(#SVGID_4_);stroke:#4255A5;stroke-miterlimit:10;}
+                                .st5{fill:url(#SVGID_5_);stroke:#4255A5;stroke-miterlimit:10;}
+                            </style>
+                            <g>
+                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="111.6895" y1="196.0762" x2="111.6894" y2="10.0711">
+                                    <stop  offset="0" style="stop-color:#8000E9"/>
+                                    <stop  offset="0.7685" style="stop-color:#15A6FF"/>
+                                </linearGradient>
+                                <path class="st1" d="M68.396,189.094c-0.417,0.127-0.802,0.229-1.212,0.35c10.669,4.266,22.298,6.633,34.489,6.633
+                                    c20.371,0,39.198-6.566,54.521-17.674C132.514,172.422,108.359,176.734,68.396,189.094z"/>
+                                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="103.002" y1="196.0791" x2="103.0019" y2="10.0593">
+                                    <stop  offset="0" style="stop-color:#8000E9"/>
+                                    <stop  offset="0.7685" style="stop-color:#15A6FF"/>
+                                </linearGradient>
+                                <path class="st2" d="M68.396,149.18c-20.476,6.332-34.804,6.672-44.847,4.328c5.277,8.16,11.784,15.447,19.28,21.582
+                                    c9.691-2.639,21.791-6.318,36.97-11.338c40.533-13.408,69.04-6.145,87.716,5.004c5.809-5.822,10.828-12.424,14.938-19.611
+                                    C147.937,130.438,122.821,132.348,68.396,149.18z"/>
+                                <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="101.6753" y1="196.0781" x2="101.6753" y2="10.0986">
+                                    <stop  offset="0" style="stop-color:#8000E9"/>
+                                    <stop  offset="0.7685" style="stop-color:#15A6FF"/>
+                                </linearGradient>
+                                <path class="st3" d="M194.451,96.852c-21.807,2.052-51.472,2.554-88.043-2.156C53.651,87.9,25.02,81.171,11.269,81.253
+                                    c-1.685,7.002-2.6,14.3-2.6,21.816c0,13.407,2.857,26.137,7.963,37.653c10.445-1.07,29.08-5.609,63.168-16.885
+                                    c57.027-18.863,90.252,3.186,105.774,19.408c5.836-12.162,9.106-25.787,9.106-40.176
+                                    C194.681,100.978,194.585,98.908,194.451,96.852z"/>
+                                <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="103.4346" y1="196.0762" x2="103.4346" y2="10.0664">
+                                    <stop  offset="0" style="stop-color:#8000E9"/>
+                                    <stop  offset="0.7685" style="stop-color:#15A6FF"/>
+                                </linearGradient>
+                                <path class="st4" d="M113.378,78.857c36.224,4.83,61.908,7.779,80.135,9.517c-0.952-5.997-2.466-11.806-4.507-17.361
+                                    c-11.07,3.938-25.818,5.486-45.22,1.234c-80.537-22.469-70.641-33.011-109.1-33.661c-9.551,9.92-16.916,21.948-21.329,35.329
+                                    C27.572,71.334,56.3,71.248,113.378,78.857z"/>
+                                <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="119.665" y1="196.0771" x2="119.665" y2="10.0642">
+                                    <stop  offset="0" style="stop-color:#8000E9"/>
+                                    <stop  offset="0.7685" style="stop-color:#15A6FF"/>
+                                </linearGradient>
+                                <path class="st5" d="M180.883,54.322c-16.376-26.553-45.722-44.258-79.209-44.258c-15.61,0-30.308,3.862-43.226,10.657
+                                    c20.555,0.156,47.257,5.66,80.902,22.089C155.456,50.673,169.382,53.749,180.883,54.322z"/>
+                                <path class="st0" d="M189.006,71.012c-2.155-5.865-4.891-11.446-8.123-16.69c-11.501-0.573-25.427-3.648-41.532-11.512
+                                    c-33.646-16.429-60.348-21.933-80.902-22.089c-8.864,4.662-16.873,10.712-23.762,17.864c38.459,0.65,28.563,11.192,109.1,33.661
+                                    C163.188,76.499,177.936,74.951,189.006,71.012z"/>
+                                <path class="st0" d="M79.8,123.838c-34.088,11.275-52.723,15.814-63.168,16.885c1.977,4.457,4.293,8.729,6.918,12.785
+                                    c10.043,2.344,24.371,2.004,44.847-4.328c54.425-16.832,79.54-18.742,114.058-0.035c1.102-1.928,2.156-3.887,3.12-5.898
+                                    C170.052,127.023,136.827,104.975,79.8,123.838z"/>
+                                <path class="st0" d="M79.8,163.752c-15.179,5.02-27.278,8.699-36.97,11.338c7.278,5.951,15.483,10.809,24.354,14.354
+                                    c0.41-0.121,0.795-0.223,1.212-0.35c39.963-12.359,64.117-16.672,87.798-10.691c4.026-2.92,7.82-6.135,11.321-9.646
+                                    C148.84,157.607,120.333,150.344,79.8,163.752z"/>
+                                <path class="st0" d="M194.451,96.852c-0.19-2.864-0.495-5.693-0.938-8.479c-18.227-1.737-43.911-4.687-80.135-9.517
+                                    C56.3,71.248,27.572,71.334,13.357,73.915c-0.794,2.405-1.491,4.853-2.089,7.339c13.751-0.082,42.383,6.646,95.14,13.442
+                                    C142.979,99.406,172.645,98.904,194.451,96.852z"/>
                             </g>
                         </svg>
                     </div>
@@ -754,6 +857,12 @@
                                     <div class="persent">60%</div>
                                 </li>
                             </ul>
+                            <div class="txt-box">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid est adipisci sed. Velit sint numquam repudiandae accusantium aliquid incidunt excepturi placeat quod illo tempore, maiores corporis aspernatur vero ullam at?
+                                Dignissimos molestias enim aperiam vel iure, impedit odit tempore dolorem excepturi, blanditiis facilis iusto sed. Quia atque sit repellendus pariatur, expedita consectetur dicta eum! Asperiores nihil corrupti quo numquam voluptates.
+                                Libero quo mollitia similique voluptates laboriosam deserunt consectetur expedita, minima illo porro eum praesentium at perspiciatis sit quos dolor corrupti magni incidunt quidem nesciunt esse veniam voluptate cumque facilis? Veritatis.
+                                Modi vero obcaecati officia consectetur aspernatur enim commodi aut, adipisci incidunt aliquam eos deserunt voluptas at sapiente tenetur saepe aperiam labore maiores fugit recusandae? Minus harum illum nemo sit perferendis?</p>
+                            </div>
                         </article>
                     </div>
                 </section>
@@ -763,21 +872,21 @@
                         <h3>DESIGN</h3>
                         <article class="art dis-art icon">
                             <h4>ICON</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima?</p>
+                            <p>아이콘 디자인</p>
                             <div class="swiper mySwiper-icn">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="./images/icon-home.svg" alt="홈"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-message.svg" alt="메세지"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-seach.svg" alt="검색"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-setting.svg" alt="설정"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-user.svg" alt="유저"></div>
-                                    <div class="swiper-slide"><img src="./images/space-icon-gun.svg" alt="총"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-alien.svg" alt="외계인"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-heart.svg" alt="하트"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-earth.svg" alt="지구"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-waring.svg" alt="경고"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-target.svg" alt="타겟"></div>
-                                    <div class="swiper-slide"><img src="./images/icon-good.svg" alt="좋아요"></div>
+                                    <div class="swiper-slide">
+                                        <p>SPACE ICON</p>
+                                        <img src="./images/icon-space.svg" alt="아이콘">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>SPACE ICON</p>
+                                        <img src="./images/icon-space.svg" alt="아이콘">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>SPACE ICON</p>
+                                        <img src="./images/icon-space.svg" alt="아이콘">
+                                    </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
@@ -797,20 +906,20 @@
                                 <div class="swiper-pagination"></div>
                             </div>
                         </article>
-                        <article class="art dis-art web">
-                            <h4>WEB</h4>
+                        <article class="art dis-art banner">
+                            <h4>BANNER</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima?</p>
-                            <div class="swiper mySwiper-web">
+                            <div class="swiper mySwiper-banner">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
-                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
-                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
-                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
+                                    <div class="swiper-slide item item01"><img src="./images/img-web.png" alt="예시"></div>
+                                    <div class="swiper-slide item item02"><img src="./images/img-web.png" alt="예시"></div>
+                                    <div class="swiper-slide item item03"><img src="./images/img-web.png" alt="예시"></div>
+                                    <div class="swiper-slide item item04"><img src="./images/img-web.png" alt="예시"></div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
                         </article>
-                        <div class="popup popup01">
+                        <div class="popup popup-poster popup01">
                             <div class="popup-contents">
                                 <h4>포스터01</h4>
                                 <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
@@ -820,7 +929,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup02">
+                        <div class="popup popup-poster popup02">
                             <div class="popup-contents">
                                 <h4>포스터02</h4>
                                 <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
@@ -830,7 +939,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup03">
+                        <div class="popup popup-poster popup03">
                             <div class="popup-contents">
                                 <h4>포스터03</h4>
                                 <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
@@ -840,7 +949,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup04">
+                        <div class="popup popup-poster popup04">
                             <div class="popup-contents">
                                 <h4>포스터04</h4>
                                 <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
@@ -850,7 +959,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup05">
+                        <div class="popup popup-poster popup05">
                             <div class="popup-contents">
                                 <h4>포스터05</h4>
                                 <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
@@ -860,10 +969,50 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup06">
+                        <div class="popup popup-poster popup06">
                             <div class="popup-contents">
                                 <h4>포스터06</h4>
                                 <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup-banner popup01">
+                            <div class="popup-contents">
+                                <h4>배너01</h4>
+                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup-banner popup02">
+                            <div class="popup-contents">
+                                <h4>배너02</h4>
+                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup-banner popup03">
+                            <div class="popup-contents">
+                                <h4>배너03</h4>
+                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup-banner popup04">
+                            <div class="popup-contents">
+                                <h4>배너04</h4>
+                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
                                 <div class="btn-close">
                                     <span></span><span></span>
@@ -1005,21 +1154,27 @@
 
         })
 
-        
-            
-
         var swiper = new Swiper(".mySwiper-icn", {
-            slidesPerView: 2,
-            grid: {
-                rows: 2,
-            },
-            spaceBetween: 80,
             pagination: {
                 el: ".swiper-pagination",
-                clickable: true,
             },
-            freeMode:true,
+            spaceBetween: 80,
         });
+                
+            
+
+        // var swiper = new Swiper(".mySwiper-icn", {
+        //     slidesPerView: 3,
+        //     grid: {
+        //         rows: 2,
+        //     },
+        //     spaceBetween: 80,
+        //     pagination: {
+        //         el: ".swiper-pagination",
+        //         clickable: true,
+        //     },
+        //     freeMode:true,
+        // });
 
 
         var swiper = new Swiper(".mySwiper-pst", {
@@ -1038,7 +1193,7 @@
             freeMode:true,
         });
         
-        var swiper = new Swiper(".mySwiper-web", {
+        var swiper = new Swiper(".mySwiper-banner", {
             slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
@@ -1048,10 +1203,9 @@
             breakpoints: {
                 1024: {
                 slidesPerView: 1,
-                spaceBetween: 50,
+                spaceBetween: 80,
                 },
             },
-            freeMode:true,
         });
 
         var swiper = new Swiper(".mySwiper-pub", {
@@ -1065,16 +1219,27 @@
         });
 
         function fnPopOpen(item){
-        $('.popup').eq(item).show();
+        $('.popup-poster').eq(item).show();
         }
 
         $('.poster .item').click(function(){
             fnPopOpen($(this).index());
         })
         $('.btn-close').click(function(){
-            $('.popup').hide();
+            $('.popup-poster').hide();
         })
 
+
+        function fnPopOpen(item){
+        $('.popup-banner').eq(item).show();
+        }
+
+        $('.banner .item').click(function(){
+            fnPopOpen($(this).index());
+        })
+        $('.btn-close').click(function(){
+            $('.popup-banner').hide();
+        })
     </script>
 </body>
 </html>
