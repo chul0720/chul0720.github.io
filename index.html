@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="./js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family:'Hanbit';
+            src: url(./fonts/KCC-Hanbit.ttf);
+        }
+        @font-face {
+            font-family:'BebasNeue';
+            src: url(./fonts/BebasNeue-Regular.ttf);
+        }
+        @font-face {
+            font-family:'THEBOLD';
+            src: url(./fonts/THE\ BOLD\ FONT\ -\ FREE\ VERSION\ -\ 2023.ttf);
+        }
+        @font-face {
+            font-family:'Akira';
+            src: url(./fonts/Akira\ Expanded\ Demo.otf);
+        }
+        @font-face {
+            font-family:'Vampire';
+            src: url(./fonts/Vampire\ Wars\ Italic.ttf);
+        }
+        
+        body{
+            background:#4c8ccc;
+            scrollbar-width:0;
+        }
+
+        #header{
+            position:fixed;
+            display:none;
+            left:0;
+            right:0;
+            top:0;            
+            background:#e6d83e;    
+            z-index:10;        
+        }
+        #header .container{
+            width:1200px;
+            height:50px;
+            margin:0 auto;
+            padding:10px 40px;
+        }
+        
+        #header ul{
+            display:flex;
+            justify-content:space-between;
+        }
+        #header ul li{
+            font-family:'Hanbit';
+            font-weight:300;
+            font-size:20px;
+            text-transform:uppercase;
+        }
+        #header ul li:hover{
+            color:#fff;
+        }
+        #home .tit-home{
+            display:flex;
+            flex-flow:nowrap;
+        }
+        #home {
+            overflow: hidden;
+            position:relative;
+            padding-bottom:600px;
+            background:url(./images/background03.png.svg) no-repeat center;
+            background-size: cover;
+        }
+        #home::before{
+           content:''; 
+           display:block;
+           width:300px;
+           height:200px;
+           background:url(./images/icon-shootingstar.svg) no-repeat center;
+           background-size:contain;
+           position:absolute;
+           right:-90px;
+           /* right:90%;            */
+           top:-100px;
+           opacity:0;
+           /* top:90%; */
+           transform: rotate(-15deg);
+            animation: star-move 2.5s linear 0s infinite ;
+        }
+        
+        @keyframes star-move {
+            0%{
+                right:-100px;
+                top:-100px;
+                opacity:0;
+            }
+            30%{
+                opacity:1;
+            }
+            70%{
+                opacity: 0;
+            }
+            100%{
+                right:110%;
+                top:110%;
+            }
+        }
+        #home svg{
+            position:absolute;
+        }
+        #home .star-shine01 svg{
+            left:500px;
+            top:30px;
+            animation: star-shine 1.8s linear 0s infinite;
+            opacity:1;
+        }
+        #home .star-shine02 svg{
+            left:1200px;
+            top:100px;
+            animation: star-shine 1.4s linear 0s infinite;
+        }
+        #home .star-shine03 svg{
+            left:300px;
+            top:340px;
+            animation: star-shine 1.6s linear 0s infinite;
+        }
+        #home .star-shine04 svg{
+            left:1200px;
+            top:700px;
+            animation: star-shine 1.8s linear 0s infinite;
+        }
+        #home .star-spin svg{
+            left:1340px;
+            top:500px;
+            animation: star-spin 5s linear 0s infinite;
+        }
+
+        @keyframes star-shine {
+            0%{
+                opacity:1;
+            }
+            30%{
+                opacity:0;
+            }
+            100%{
+                opacity:1;
+            }
+        }
+        @keyframes star-spin {
+            0%{
+                rotate:0deg;
+            }
+            
+            100%{
+                rotate:360deg;
+            }
+        }
+        #home .container{
+            position:relative;
+            z-index:10;
+        }
+        #home h1{
+            margin:150px 0;
+            font-family:'Vampire';
+            font-weight:900;
+            font-size:150px;
+            text-transform:uppercase;
+            color:#e6d83e;
+            transition:0.3s;
+            -webkit-text-stroke:3px #f038d4;
+            text-shadow: 0 0 30px #fd83ca;
+
+        }
+        #home img{
+            width:260px;
+            margin:160px 0 0 40px;
+        }
+        
+        #home ul li{
+            width:700px;
+            height:60px;
+            margin-bottom:30px;
+            padding-right:48px;
+            padding-top:10px;
+            border:1px solid #f038d4;
+            border-left:transparent;
+            border-end-end-radius:30px;
+            border-start-end-radius:30px;
+            background:#e6d83e;
+            text-align:end;
+            text-transform:uppercase;
+            font-family:'THEBOLD';
+            font-size: 30px;
+            box-shadow: 0px 0px 10px #f038d4;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        #home ul li:hover{
+            background-color:#fff;
+        }
+        #home ul li:nth-child(2){
+            width:800px;
+        }
+        #home ul li:nth-child(3){
+            width:900px;
+        }
+        #home ul li:nth-child(4){
+            width:1000px;
+        }
+        #home ul li:hover:first-child{
+            width:800px;
+        }
+        #home ul li:hover:nth-child(2){
+            width:900px;
+        }
+        #home ul li:hover:nth-child(3){
+            width:1000px;
+        }
+        #home ul li:hover:nth-child(4){
+            width:1100px;
+        }
+        
+
+
+        #contents p{
+            font-family:'Hanbit';
+        }
+        #contents .container{
+            width:1200px;
+            margin:0 auto;
+        }
+        #contents h2{
+            width:1920px;
+            height:80px;
+            border:1px solid #f038d4;
+            border-left:transparent;
+            border-right:transparent;
+            margin: 0 0 170px -370px;
+            padding-top:10px;
+            text-align:center;
+            text-transform:uppercase;
+            font-family:'THEBOLD';
+            font-style:italic;
+            font-size:50px;
+            background:#e6d83e;
+            box-shadow: 0px 0px 20px #f038d4;
+        }
+        #contents article{
+            color:#fff;
+        }
+        
+        
+        
+        #about{
+            padding-bottom:600px;
+            background:url(./images/background04.svg) no-repeat center;
+            background-size:cover;
+        }
+        #about .profile ul{
+            display:flex;
+            flex-flow:nowrap;
+        }
+        #about h3{
+            margin:100px 0 50px 0;
+            font-family:'THEBOLD';
+            font-weight:300;
+            font-size:50px;
+            text-transform:uppercase;
+        }
+        
+        #about .profile img{
+            width:240px;
+            height:300px;
+            margin:0 30px 30px 0;
+            border:10px solid #79c0f7;
+            border-radius:30px;
+        }
+        #about .profile p{
+            font-weight:300;
+            font-size:20px;
+        }
+        #about .skills{
+            text-align:end;
+            margin-top:300px;
+        }
+        #about .skills h3{
+            margin-right:60px;
+        }
+        #about .skills ul{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            column-gap:40px;
+            width:1200px;
+            height:500px;
+            padding:30px 30px;
+            border-radius:30px;
+            background:#79c0f7cd;
+        }
+        #about .skills li{
+            display:flex;
+            flex-flow:nowrap;
+            justify-content:start;
+            align-items:center;
+        }
+        #about .skills img{
+            width:80px;
+            height:80px;
+            margin-right:30px;
+        }
+        .progress{
+            position: relative;
+            width:380px;
+            height:30px;
+            background:#fff;
+            margin-right:10px;
+            border-radius:20px;
+        }
+        .progress::after{
+            content:'';
+            display: block;
+            position: absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            width:0%;
+            background:#54b44d;
+            border-top-left-radius:20px;
+            border-bottom-left-radius:20px; 
+            transition:0.3s 0s;           
+        }
+        .skills li:nth-child(1) .progress::after{
+            transition-delay:0s;
+        }
+        .skills li:nth-child(2) .progress::after{
+            transition-delay:0.2s;
+        }
+        .skills li:nth-child(3) .progress::after{
+            transition-delay:0.4s;
+        }
+        .skills li:nth-child(4) .progress::after{
+            transition-delay:0.6s;
+        }
+        .skills li:nth-child(5) .progress::after{
+            transition-delay:0.8s;
+        }
+        .skills li:nth-child(6) .progress::after{
+            transition-delay:1s;
+        }
+        .skills li:nth-child(1) .progress.active::after{
+            width:80%;
+        }
+        .skills li:nth-child(2) .progress.active::after{
+            width:90%;
+        }
+        .skills li:nth-child(3) .progress.active::after{
+            width:70%;
+        }
+        .skills li:nth-child(4) .progress.active::after{
+            width:70%;
+        }
+        .skills li:nth-child(5) .progress.active::after{
+            width:60%;
+        }
+        .skills li:nth-child(6) .progress.active::after{
+            width:60%;
+        }
+
+        .persent{
+            font-family:'Hanbit';
+            font-size:20px;
+        }
+
+
+        #portfolio{
+            position:relative;
+            padding-bottom:600px;
+            background:url(./images/background05.svg) no-repeat center;
+            background-size:cover;
+        }
+        #portfolio ul{
+            display:flex;
+            flex-flow:wrap;
+        }
+        #portfolio article{
+            margin:200px 60px;
+        }
+        #portfolio h3{
+            width:1200px;
+            height:70px;
+            border:1px solid #fff;
+            border-bottom:transparent;
+            border-right:transparent;
+            border-start-start-radius:90px;
+            margin-bottom:100px;
+            padding:10px 0 0 40px;
+            text-align:start;
+            text-transform:uppercase;
+            font-family:'THEBOLD';
+            font-size:50px;
+            color:#fff;
+        }
+        #portfolio h4{
+            font-family:'Hanbit';
+            font-weight:500;
+            font-size:50px;
+            margin-bottom:40px;
+        }
+        #portfolio p{
+            margin:80px 0;
+        }
+        #portfolio a{font-family:'Hanbit';}
+
+        #portfolio .hollys-itm{
+            display:flex;
+            flex-flow:nowrap;
+        }
+        #portfolio .hollys-itm ul{
+            display:grid;
+            grid-template-columns:repeat(5,auto);
+            align-items:center;
+            margin-left:30px;
+        }
+        #portfolio .hollys-itm ul li:first-child{
+            grid-column:1/-1;
+            align-content:start;
+        }
+        #portfolio .hollys-itm ul li:nth-child(2){
+            grid-column:1/2;
+            margin-right:10px;
+        }
+        #portfolio .hollys-itm ul li:nth-child(3){
+            grid-column:2/3;
+        }
+        #portfolio .hollys-itm ul li:nth-child(4){
+            grid-column:1/2;
+            margin-right:10px;
+        }
+        #portfolio .hollys-itm ul img{
+            width:40px;
+            height:40px;
+            transform:rotate(30deg);
+        }
+        #portfolio .hollys-itm p{
+            margin:0 0 30px 0;
+        }
+        #portfolio .img-box img{
+            width:300px;
+            height:400px;
+        }
+        #portfolio .popup{
+            display:none;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            z-index:100;           
+            height:100%;
+            background:#71717149;
+        }
+        #portfolio .popup-contents{
+            position:relative;
+            margin:0 auto;
+            padding:30px;
+            background:#79c0f7;
+            border-radius:30px;
+            text-align:center;
+        }
+        #portfolio .popup-contents .btn-close{
+            position:absolute;
+            left:1150px;
+            top:30px;
+            width:50px;
+            height:50px;
+            cursor:pointer;
+        }
+        #portfolio .popup-contents .btn-close span{
+            position:absolute;
+            left:0;
+            right:0;
+            top:50%;
+            transform:rotate(45deg);
+            height:2px;
+            background:#000;
+        }
+        #portfolio .popup-contents .btn-close span:last-child{
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+        #portfolio .popup-contents img{
+            width:500px;
+            height:100%
+        }
+
+
+
+        #contact{
+            padding-bottom:300px;
+            background:url(./images/background06.png) no-repeat center;
+            background-size:cover;
+
+        }
+        #contact h3{
+            font-family:'Hanbit';
+            font-weight:300;
+            font-size:65px;
+            margin-bottom:150px;
+            text-align:center;
+            text-transform:uppercase;
+            color:#fff;
+        }
+        #contact article{
+            display:flex;
+            justify-content:center;
+        }
+        #contact article .img-box{
+            width:300px;
+            height:300px;
+            border:10px solid #79c0f7;
+        }
+        #contact article ul{
+            display:grid;
+            grid-template-columns:repeat(2,auto);
+            margin:60px;
+            align-items:center;
+            font-family:'Hanbit';
+            font-weight:500;
+            font-size:20px;
+        }
+        #contact article ul img{
+            width:60px;
+            margin-right:30px;
+            background:#fff;
+            border:10px solid #fff;
+            border-radius:30px;
+        }
+        #contact article li:first-child img{
+            background:#54b44d;
+            border:none;
+            border-radius:30px;
+        }
+        #footer{
+            height:150px;
+            font-family:'Hanbit';
+            text-align:center;
+            line-height:1.6;
+            color:#fff;
+            background:#6aa7e3;            
+        }
+        #footer h4{
+            padding-top:56px;
+        }
+        
+        .swiper{
+            width:800px;
+            height:700px;
+            margin:0 auto;
+            padding:0 80px;
+        }
+        .poster .swiper{
+            width:1200px;
+            height:550px;
+        }
+        .web .swiper{
+            height:500px;
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        <header id="header">
+            <div class="container">
+                <nav id="nav-fix">
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <section class="sec" id="home">
+                <div class="container">
+                    <div class="shine star-shine01">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                            <path fill="#FFFFFF" d="M50,9.667c0,0,1.351,29.807,5.772,34.228S90,49.667,90,49.667s-30.826,2.372-34.228,5.772
+                                S50,89.667,50,89.667s-0.603-29.057-5.772-34.228S10,49.667,10,49.667s29.67-1.214,34.228-5.772S50,9.667,50,9.667z"/>
+                        </svg>
+                    </div>
+                    <div class="shine star-shine02">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                            <path fill="#FFFFFF" d="M50,9.667c0,0,1.351,29.807,5.772,34.228S90,49.667,90,49.667s-30.826,2.372-34.228,5.772
+                                S50,89.667,50,89.667s-0.603-29.057-5.772-34.228S10,49.667,10,49.667s29.67-1.214,34.228-5.772S50,9.667,50,9.667z"/>
+                        </svg>
+                    </div>
+                    <div class="shine star-shine03">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                            <path fill="#FFFFFF" d="M50,9.667c0,0,1.351,29.807,5.772,34.228S90,49.667,90,49.667s-30.826,2.372-34.228,5.772
+                                S50,89.667,50,89.667s-0.603-29.057-5.772-34.228S10,49.667,10,49.667s29.67-1.214,34.228-5.772S50,9.667,50,9.667z"/>
+                        </svg>
+                    </div>
+                    <div class="shine star-shine04">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                            <path fill="#FFFFFF" d="M50,9.667c0,0,1.351,29.807,5.772,34.228S90,49.667,90,49.667s-30.826,2.372-34.228,5.772
+                                S50,89.667,50,89.667s-0.603-29.057-5.772-34.228S10,49.667,10,49.667s29.67-1.214,34.228-5.772S50,9.667,50,9.667z"/>
+                        </svg>
+                    </div>
+                    <div class="star-spin">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                            <g>
+                                <circle fill="#E18BE8" cx="150.042" cy="150.09" r="82.229"/>
+                                <path fill="#50CCC6" d="M94.787,89.184c0,0,25.985-12.185,41.573,0.431s18.265,23.927,8.909,49.597
+                                    c-9.354,25.673-7.128,32.63,7.57,40.462c10.524,5.604,32.075-0.52,42.209,8.594c21.049,18.925-24.776,41.66-24.776,41.66
+                                    s-67.829,17.62-97.674-47.641C52.584,122.681,94.787,89.184,94.787,89.184z"/>
+                                <path fill="#69EDE9" d="M92.515,98.81c0,0,20.652-11.196,34.584,0.346c13.929,11.543,16.319,21.891,7.961,45.379
+                                    c-8.359,23.485-6.37,29.854,6.768,37.021c9.399,5.126,28.659-0.477,37.714,7.861c18.808,17.317-21.793,39.109-21.793,39.109
+                                    s-58.772,13.673-85.443-46.036C54.031,123.563,92.515,98.81,92.515,98.81z"/>
+                                <path fill="#50CCC6" d="M171.358,103.428c0,0,13.215-19.415,32.63,0c19.415,19.416-17.293,17.294-17.293,17.294
+                                    S167.116,120.07,171.358,103.428z"/>
+                                <path fill="#69EDE9" d="M166.138,100.818c0,0,13.216-19.415,32.63,0c19.416,19.415-17.295,17.293-17.295,17.293
+                                    S161.896,117.46,166.138,100.818z"/>
+                                <g>
+                                    <path fill="none" d="M235.737,103.694l-9.04,5.218L235.737,103.694c-8.24-15.191-20.399-27.955-35.116-36.928l-4.974,8.616
+                                        l4.084-8.616C185.442,58.052,168,52.944,150,52.635v10.006V52.635c0-0.01-0.235-0.043-0.808-0.043
+                                        c-16.994,0-32.532,4.385-46.45,12.069l5.23,8.678l-4.897-8.678C88.27,72.833,75.864,84.742,67.028,99.115l8.178,4.709
+                                        l-8.139-3.948C58.37,114.023,53.223,130,52.778,149h8.943h-8.943c-0.021,0-0.063,0.891-0.063,1.722
+                                        c0,16.839,4.301,32.313,11.856,46.146l8.05-4.839l-8.05,4.553c8.097,14.818,19.935,27.252,34.229,36.146l4.875-8.466l-5.652,8.431
+                                        C111.991,241.382,130,246.611,145,247.238v-9.7v9.7c2,0.041,3.119,0.089,4.303,0.089c16.585,0,32.598-4.177,46.275-11.52
+                                        l-4.65-8.396l4.941,8.396c15.206-8.156,28.047-20.232,37.082-34.87l-8.886-5.145l8.921,5.793
+                                        C241.689,187.48,246.89,170,247.381,154h-10.762h10.762c0.026-3,0.069-2.469,0.069-3.39
+                                        C247.45,133.874,243.204,117.465,235.737,103.694z"/>
+                                    <path fill="#FCFFC2" d="M199.731,66.766l0.862-2.263C185.92,55.569,170,50.334,150,50.025v2.61
+                                        C168,52.944,185.442,58.052,199.731,66.766z"/>
+                                    <path fill="#FCFFC2" d="M103.187,64.661l-1.305-2.259C86.68,70.804,73.887,83.042,64.821,97.81l2.261,1.305
+                                        C75.92,84.742,88.38,72.833,103.187,64.661z"/>
+                                    <path fill="#FCFFC2" d="M247.45,150.61c0,0.921-0.043,0.39-0.069,3.39h2.61c0.026-3,0.069-2.469,0.069-3.39
+                                        c0-17.21-4.371-33.744-12.061-47.896l-2.263,1.468C243.204,117.952,247.45,133.874,247.45,150.61z"/>
+                                    <path fill="#FCFFC2" d="M52.715,150.722c0-0.831,0.043-1.722,0.063-1.722h-2.61c-0.022,0-0.063,0.891-0.063,1.722
+                                        c0,17.313,4.427,33.233,12.208,47.451l2.259-1.116C57.016,183.225,52.715,167.561,52.715,150.722z"/>
+                                    <path fill="#FCFFC2" d="M195.969,235.808l1.305,2.264c15.602-8.389,28.726-20.796,37.984-35.829l-2.26-1.305
+                                        C223.965,215.575,211.173,227.651,195.969,235.808z"/>
+                                    <path fill="#FCFFC2" d="M98.023,232.68l-1.695,2.263C110.68,243.854,130,249.222,145,249.849v-2.61
+                                        C130,246.611,111.991,241.371,98.023,232.68z"/>
+                                </g>
+                                <g>
+                                    <path fill="none" d="M252.788,94.544l-10.847,6.264L252.788,94.544c-9.886-18.226-24.477-33.545-42.138-44.313l-5.972,10.34
+                                        l4.952-10.34C192.484,39.777,172,33.643,150,33.277v12.007V33.277c0-0.013-0.332-0.054-1.017-0.054
+                                        c-20.392,0-39.06,5.264-55.765,14.485l6.267,10.411l-5.885-10.411C75.834,57.515,60.943,71.806,50.34,89.054l9.813,5.649
+                                        l-9.767-4.692C39.949,106.983,33.771,128,33.236,149h10.734H33.236c-0.023,0-0.074,1.023-0.074,2.019
+                                        c0,20.21,5.16,38.76,14.227,55.356l9.663-5.817l-9.663,5.458c9.716,17.781,23.923,32.7,41.079,43.373l5.847-10.16l-6.234,10.114
+                                        c16.759,10.429,35.92,16.704,56.92,17.456v-11.64v11.64c2,0.049,3.199,0.106,4.615,0.106c19.9,0,38.842-5.014,55.26-13.823
+                                        l-5.721-10.072l5.863,10.072c18.241-9.789,33.621-24.279,44.459-41.844l-10.674-6.175l10.693,6.495
+                                        C259.94,194.631,266.173,175,266.761,154h-12.914h12.914c0.031-3,0.083-2.506,0.083-3.613
+                                        C266.844,130.306,261.749,111.069,252.788,94.544z"/>
+                                    <path fill="#FCFFC2" d="M148.983,33.223c0.685,0,1.017,0.041,1.017,0.054v-3.134c0-0.013-0.332-0.053-1.017-0.053
+                                        c-20.961,0-40.163,5.42-57.333,14.906l1.312,2.712C109.668,38.487,128.592,33.223,148.983,33.223z"/>
+                                    <path fill="#FCFFC2" d="M252.788,94.544l2.715-1.568c-10.161-18.701-25.15-34.416-43.285-45.459l-1.567,2.714
+                                        C228.312,60.999,242.902,76.318,252.788,94.544z"/>
+                                    <path fill="#FCFFC2" d="M149.615,266.905c-1.416,0-2.615-0.058-4.615-0.106v3.134c2,0.048,3.199,0.106,4.615,0.106
+                                        c20.472,0,39.947-5.164,56.824-14.24l-1.662-2.717C188.36,261.892,169.516,266.905,149.615,266.905z"/>
+                                    <path fill="#FCFFC2" d="M266.761,154c-0.588,21-6.814,40.631-17.258,57.559l2.711,1.73C262.929,195.898,269.305,175,269.895,154
+                                        H266.761z"/>
+                                    <path fill="#FCFFC2" d="M47.389,205.895l-2.71,1.569c9.987,18.252,24.593,33.631,42.222,44.578l1.567-2.712
+                                        C71.312,238.655,57.104,223.679,47.389,205.895z"/>
+                                    <path fill="#FCFFC2" d="M50.402,90.011l-2.713-1.091C36.982,106.356,30.64,128,30.105,149h3.131
+                                        C33.771,128,39.966,106.983,50.402,90.011z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="tit-home">
+                        <div class="img-box">
+                            <img src="./images/icon-gun.png" alt="장난감총">
+                        </div>
+                        <a href="./index.html"><h1>portfolio</h1></a>
+                    </div>
+                    <nav id="nav-home">
+                        <ul>
+                            <li><a href="#home">home</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#portfolio">portfolio</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <div id="contents">
+                <section class="sec" id="about">
+                    <div class="container">
+                        <h2><a href="#about">about</a></h2>
+                        <article class="profile">
+                            <h3>profile</h3>
+                            <ul>
+                                <div class="img-box"><img src="./images/img-profile.jpg" alt="프로필사진"></div>
+                                <p>
+                                    <br>
+                                    NAME : 박서희 <br>
+                                    BIRTH : 2000 . 07 . 20 <br>
+                                    <br><br>
+                                    안녕하세요. <br>
+                                    어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
+                                    어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
+                                    어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
+                                </p>
+                            </ul>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cumque laboriosam velit, in soluta, ex fugiat, modi eum provident explicabo illo corrupti culpa atque debitis aut a reiciendis architecto voluptatum.
+                                Ex unde perspiciatis, corrupti esse veritatis exercitationem, a nostrum excepturi repellendus quae quo iste inventore laboriosam voluptas debitis accusamus quasi? Asperiores debitis ut impedit quisquam molestias officiis. Eaque, voluptatibus sequi!
+                            </p>
+                        </article>
+                        <article class="skills">
+                            <h3>skills</h3>
+                            <ul>
+                                <li>
+                                    <div class="img-box"><img src="./images/ico-photo.png" alt="포토샵"></div>
+                                    <div class="progress "></div>
+                                    <div class="persent">80%</div>                                    
+                                </li>
+                                <li>
+                                    <div class="img-box"><img src="./images/ico-ai.png" alt="일러스트"></div>
+                                    <div class="progress "></div>
+                                    <div class="persent">90%</div>
+                                </li>
+                                <li>
+                                    <div class="img-box"><img src="./images/ico-html.png" alt="html"></div>
+                                    <div class="progress "></div>
+                                    <div class="persent">70%</div>
+                                </li>
+                                <li>
+                                    <div class="img-box"><img src="./images/ico-css.png" alt="css"></div>
+                                    <div class="progress "></div>
+                                    <div class="persent">70%</div>
+                                </li>
+                                <li>
+                                    <div class="img-box"><img src="./images/ico-js.png" alt="javascript"></div>
+                                    <div class="progress "></div>
+                                    <div class="persent">60%</div>
+                                </li>
+                                <li>
+                                    <div class="img-box"><img src="./images/ico-jq.png" alt="jquery"></div>
+                                    <div class="progress "></div>
+                                    <div class="persent">60%</div>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section class="sec" id="portfolio">
+                    <div class="container">
+                        <h2>portfolio</h2>
+                        <h3>DESIGN</h3>
+                        <article class="art dis-art icon">
+                            <h4>ICON</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima?</p>
+                            <div class="swiper mySwiper-icn">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./images/icon-home.svg" alt="홈"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-message.svg" alt="메세지"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-seach.svg" alt="검색"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-setting.svg" alt="설정"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-user.svg" alt="유저"></div>
+                                    <div class="swiper-slide"><img src="./images/space-icon-gun.svg" alt="총"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-alien.svg" alt="외계인"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-heart.svg" alt="하트"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-earth.svg" alt="지구"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-waring.svg" alt="경고"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-target.svg" alt="타겟"></div>
+                                    <div class="swiper-slide"><img src="./images/icon-good.svg" alt="좋아요"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </article>
+                        <article class="art dis-art poster">
+                            <h4>POSTER</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima?</p>
+                            <div class="swiper mySwiper-pst">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide item item01"><img src="./images/img-poster.png" alt="예시"></div>
+                                    <div class="swiper-slide item item02"><img src="./images/img-poster.png" alt="예시"></div>
+                                    <div class="swiper-slide item item03"><img src="./images/img-poster.png" alt="예시"></div>
+                                    <div class="swiper-slide item item04"><img src="./images/img-poster.png" alt="예시"></div>
+                                    <div class="swiper-slide item item05"><img src="./images/img-poster.png" alt="예시"></div>
+                                    <div class="swiper-slide item item06"><img src="./images/img-poster.png" alt="예시"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </article>
+                        <article class="art dis-art web">
+                            <h4>WEB</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima?</p>
+                            <div class="swiper mySwiper-web">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
+                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
+                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
+                                    <div class="swiper-slide"><img src="./images/img-web.png" alt="예시"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </article>
+                        <div class="popup popup01">
+                            <div class="popup-contents">
+                                <h4>포스터01</h4>
+                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup02">
+                            <div class="popup-contents">
+                                <h4>포스터02</h4>
+                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup03">
+                            <div class="popup-contents">
+                                <h4>포스터03</h4>
+                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup04">
+                            <div class="popup-contents">
+                                <h4>포스터04</h4>
+                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup05">
+                            <div class="popup-contents">
+                                <h4>포스터05</h4>
+                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup popup06">
+                            <div class="popup-contents">
+                                <h4>포스터06</h4>
+                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
+                                <div class="btn-close">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        </article>
+                        <h3>PUBLISHING</h3>
+                        <article class="art dis-art pub">
+                            <div class="swiper mySwiper-pub">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <h4>할리스커피</h4>
+                                        <div class="hollys-itm">
+                                            <div class="img-box"><img src="./images/img-pub.png" alt="예시"></div>
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        <br>
+                                                        <br>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                    </p>
+                                                </li>
+                                                <li><img src="./images/ico-link.png" alt="링크1"></li>
+                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                                <li><img src="./images/ico-link.png" alt="링크2"></li>
+                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h4>한솔</h4>
+                                        <div class="hollys-itm">
+                                            <div class="img-box"><img src="./images/img-pub.png" alt="예시"></div>
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        <br>
+                                                        <br>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                    </p>
+                                                </li>
+                                                <li><img src="./images/ico-link.png" alt="링크1"></li>
+                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                                <li><img src="./images/ico-link.png" alt="링크2"></li>
+                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h4>메가박스</h4>
+                                        <div class="hollys-itm">
+                                            <div class="img-box"><img src="./images/img-pub.png" alt="예시"></div>
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        <br>
+                                                        <br>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                    </p>
+                                                </li>
+                                                <li><img src="./images/ico-link.png" alt="링크1"></li>
+                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                                <li><img src="./images/ico-link.png" alt="링크2"></li>
+                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="sec" id="contact">
+                    <div class="container">
+                        <h2>contact</h2>
+                        <h3>contact here</h3>
+                        <article class="itm-cnt">
+                            <div class="img-box">
+                                <img src="./images/img-qr.jpg" alt="카카오톡QR코드">
+                            </div>
+                            <ul>
+                                <li><img src="./images/ico-naver.png" alt="네이버"></li>
+                                <li><a href="#">park000720@naver.com</a></li>
+                                <li><img src="./images/ico-gmail.png" alt="Gmail"></li>
+                                <li><a href="#">hee00072075@gmail.com</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                <h4>해당 페이지는 상업적 목적이 아닌<br>개인 포트폴리오용으로 제작되었습니다.</h4>
+            </div>
+        </footer>
+    </section>
+    <script>
+        $(window).scroll(function(){
+            // console.log($('#home').height());
+
+            // console.log($(this).scrollTop());
+            let homeHeight = $('#home').height();
+            let winHeight = $('.skills').height();
+            let skillsTop = $('.skills').position().top;
+            let scrTop = $(this).scrollTop();
+            console.log(winHeight);
+            if(scrTop>=homeHeight){
+                $('#header').slideDown(300);
+            }else{
+                $('#header').slideUp(300);
+            }
+            if(scrTop>=skillsTop){
+                $('.progress').addClass('active');
+            }else{
+                $('.progress').removeClass('active');
+            }
+
+        })
+
+        
+            
+
+        var swiper = new Swiper(".mySwiper-icn", {
+            slidesPerView: 2,
+            grid: {
+                rows: 2,
+            },
+            spaceBetween: 80,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            freeMode:true,
+        });
+
+
+        var swiper = new Swiper(".mySwiper-pst", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+                },
+            },
+            freeMode:true,
+        });
+        
+        var swiper = new Swiper(".mySwiper-web", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1024: {
+                slidesPerView: 1,
+                spaceBetween: 50,
+                },
+            },
+            freeMode:true,
+        });
+
+        var swiper = new Swiper(".mySwiper-pub", {
+            slidesPerView: 1,
+            spaceBetween: 80,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        function fnPopOpen(item){
+        $('.popup').eq(item).show();
+        }
+
+        $('.poster .item').click(function(){
+            fnPopOpen($(this).index());
+        })
+        $('.btn-close').click(function(){
+            $('.popup').hide();
+        })
+
+    </script>
+</body>
+</html>
