@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="포트폴리오,웹디자인,퍼블리싱,portfolio,">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <!-- 리셋 -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="./js/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Document</title>
@@ -144,6 +148,7 @@
             top:850px;
             width:150px;
             height:150px;
+            z-index:1;
             animation: star-spin02 10s linear 0s infinite;
         }
 
@@ -438,52 +443,94 @@
             font-family:'Hanbit';
             font-weight:500;
             font-size:50px;
-            margin-bottom:40px;
+            margin:0 60px 80px 60px;
+            border-bottom:1px solid #fff;
         }
         #portfolio p{
             margin:80px 0;
+            font-size:20px;
         }
         #portfolio .icon p{
             margin:20px;
         }
         #portfolio a{font-family:'Hanbit';}
 
-        #portfolio .hollys-itm{
+        #portfolio .pub-itm{
             display:flex;
             flex-flow:nowrap;
         }
-        #portfolio .hollys-itm ul{
+        #portfolio .pub-itm ul{
             display:grid;
             grid-template-columns:repeat(5,auto);
             align-items:center;
             margin-left:30px;
         }
-        #portfolio .hollys-itm ul li:first-child{
+        #portfolio .pub-itm li a:hover{
+            color:#fbff15;
+        }
+        #portfolio .pub-itm ul li:first-child{
             grid-column:1/-1;
             align-content:start;
         }
-        #portfolio .hollys-itm ul li:nth-child(2){
+        #portfolio .pub-itm ul li:nth-child(2){
             grid-column:1/2;
             margin-right:10px;
         }
-        #portfolio .hollys-itm ul li:nth-child(3){
+        #portfolio .pub-itm ul li:nth-child(3){
             grid-column:2/3;
         }
-        #portfolio .hollys-itm ul li:nth-child(4){
+        #portfolio .pub-itm ul li:nth-child(4){
             grid-column:1/2;
             margin-right:10px;
         }
-        #portfolio .hollys-itm ul img{
+        #portfolio .pub-itm ul img{
             width:40px;
             height:40px;
             transform:rotate(30deg);
         }
-        #portfolio .hollys-itm p{
+        
+        #portfolio .pub-itm p{
             margin:0 0 30px 0;
         }
-        #portfolio .img-box img{
-            width:300px;
+        #portfolio .poster .img-box img,
+        #portfolio .pub .img-box img{
+            width:400px;
             height:400px;
+        }
+
+
+        #portfolio .banner .banner-thum{
+            display:flex;
+            flex-flow:nowrap;
+            justify-content:start;
+            margin:30px 100px;
+        }
+        #portfolio .banner .banner-thum img{
+            width:400px;
+            margin-right:30px;
+            box-shadow: 2px 2px 10px #000;
+        }
+        
+        #portfolio .banner ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap:20px;
+            width:800px;
+            margin:0 200px;
+        }
+        
+        #portfolio .banner li img{
+            box-shadow: 2px 5px 10px #272959;
+        }
+
+        #portfolio .banner ul li:nth-child(1),
+        #portfolio .banner ul li:nth-child(2){
+            grid-column: 1/-1;
+        }
+        #portfolio .pub p,
+        #portfolio .pub a{
+            font-size:20px;
+            text-align:start;
         }
         #portfolio .popup{
             display:none;
@@ -603,13 +650,13 @@
             height:550px;
             padding:0;
         }
-        .banner .swiper{
-            width:1000px;
-            height:600px;
-        }
+        
         .pub .swiper{
             width:1000px;
         }
+
+        
+
     </style>
 </head>
 <body>
@@ -813,9 +860,8 @@
                                     BIRTH : 2000 . 07 . 20 <br>
                                     <br><br>
                                     안녕하세요. <br>
-                                    어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
-                                    어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
-                                    어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
+                                    2024년 1월부터 5월까지 웹 디자인,웹 퍼블리싱 기초 과정을 수료했습니다.
+                                    
                                 </p>
                             </ul>
                             <p>
@@ -872,7 +918,7 @@
                         <h3>DESIGN</h3>
                         <article class="art dis-art icon">
                             <h4>ICON</h4>
-                            <p>아이콘 디자인</p>
+                            <p>일러스트를 이용하여 다양한 아이콘을 디자인했습니다.</p>
                             <div class="swiper mySwiper-icn">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -893,132 +939,90 @@
                         </article>
                         <article class="art dis-art poster">
                             <h4>POSTER</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima?</p>
+                            <p>유명한 잡지회사와 영화를 참고해 포토샵으로 디자인한 포스터입니다.</p>
                             <div class="swiper mySwiper-pst">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide item item01"><img src="./images/img-poster.png" alt="예시"></div>
-                                    <div class="swiper-slide item item02"><img src="./images/img-poster.png" alt="예시"></div>
-                                    <div class="swiper-slide item item03"><img src="./images/img-poster.png" alt="예시"></div>
-                                    <div class="swiper-slide item item04"><img src="./images/img-poster.png" alt="예시"></div>
-                                    <div class="swiper-slide item item05"><img src="./images/img-poster.png" alt="예시"></div>
-                                    <div class="swiper-slide item item06"><img src="./images/img-poster.png" alt="예시"></div>
+                                    <div class="swiper-slide item item01"><img src="./images/img-poster01.jpg" alt="예시"></div>
+                                    <div class="swiper-slide item item02"><img src="./images/img-poster02.jpg" alt="예시"></div>
+                                    <div class="swiper-slide item item03"><img src="./images/img-poster03.jpg" alt="예시"></div>
+                                    <div class="swiper-slide item item04"><img src="./images/img-poster04.jpg" alt="예시"></div>
+                                    <div class="swiper-slide item item05"><img src="./images/img-poster05.jpg" alt="예시"></div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
                         </article>
-                        <article class="art dis-art banner">
-                            <h4>BANNER</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima?</p>
-                            <div class="swiper mySwiper-banner">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide item item01"><img src="./images/img-web.png" alt="예시"></div>
-                                    <div class="swiper-slide item item02"><img src="./images/img-web.png" alt="예시"></div>
-                                    <div class="swiper-slide item item03"><img src="./images/img-web.png" alt="예시"></div>
-                                    <div class="swiper-slide item item04"><img src="./images/img-web.png" alt="예시"></div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </article>
-                        <div class="popup popup-poster popup01">
+                        <div class="popup popup popup01">
                             <div class="popup-contents">
                                 <h4>포스터01</h4>
-                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <div class="img-box"><img src="./images/img-poster01.jpg" alt="포스터01"></div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
                                 <div class="btn-close">
                                     <span></span><span></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup-poster popup02">
+                        <div class="popup popup popup02">
                             <div class="popup-contents">
                                 <h4>포스터02</h4>
-                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <div class="img-box"><img src="./images/img-poster02.jpg" alt="포스터02"></div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
                                 <div class="btn-close">
                                     <span></span><span></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup-poster popup03">
+                        <div class="popup popup popup03">
                             <div class="popup-contents">
                                 <h4>포스터03</h4>
-                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <div class="img-box"><img src="./images/img-poster03.jpg" alt="포스터03"></div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
                                 <div class="btn-close">
                                     <span></span><span></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup-poster popup04">
+                        <div class="popup popup popup04">
                             <div class="popup-contents">
                                 <h4>포스터04</h4>
-                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <div class="img-box"><img src="./images/img-poster04.jpg" alt="포스터04"></div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
                                 <div class="btn-close">
                                     <span></span><span></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup-poster popup05">
+                        <div class="popup popup popup05">
                             <div class="popup-contents">
                                 <h4>포스터05</h4>
-                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
+                                <div class="img-box"><img src="./images/img-poster05.jpg" alt="포스터05"></div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
                                 <div class="btn-close">
                                     <span></span><span></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="popup popup-poster popup06">
-                            <div class="popup-contents">
-                                <h4>포스터06</h4>
-                                <div class="img-box"><img src="./images/img-poster.png" alt="예시"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
-                                <div class="btn-close">
-                                    <span></span><span></span>
-                                </div>
+                        <article class="art dis-art banner">
+                            <h4>BANNER</h4>
+                            <div class="banner-thum">
+                                <img src="./images/img-banner.jpg" alt="배너 썸네일">
+                                <p>
+                                    의류회사 광고배너
+                                    <br><br>
+                                    의류회사 로고를 강조한 광고배너를 다양한 크기로<br> 포토샵을 이용해 디자인했습니다. <br><br>
+                                    편안한 느낌을 주기 위해 잔잔한 바닷가 이미지와 <br>부드러우면서 시원한 파스텔 톤의 색감을
+                                    사용했습니다.
+                                </p>
                             </div>
-                        </div>
-                        <div class="popup popup-banner popup01">
-                            <div class="popup-contents">
-                                <h4>배너01</h4>
-                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
-                                <div class="btn-close">
-                                    <span></span><span></span>
-                                </div>
+                            <div class="img-box">
+                                <ul>                                    
+                                    <li><img src="./images/img-banner01.jpg" alt="배너01"></li>
+                                    <li><img src="./images/img-banner02.jpg" alt="배너01"></li>
+                                    <li><img src="./images/img-banner03.jpg" alt="배너01"></li>
+                                    <li><img src="./images/img-banner04.jpg" alt="배너01"></li>
+                                    <li><img src="./images/img-banner06.jpg" alt="배너01"></li>
+                                    <li><img src="./images/img-banner05.jpg" alt="배너01"></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="popup popup-banner popup02">
-                            <div class="popup-contents">
-                                <h4>배너02</h4>
-                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
-                                <div class="btn-close">
-                                    <span></span><span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup popup-banner popup03">
-                            <div class="popup-contents">
-                                <h4>배너03</h4>
-                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
-                                <div class="btn-close">
-                                    <span></span><span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup popup-banner popup04">
-                            <div class="popup-contents">
-                                <h4>배너04</h4>
-                                <div class="img-box"><img src="./images/img-web.png" alt="예시"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sint!</p>
-                                <div class="btn-close">
-                                    <span></span><span></span>
-                                </div>
-                            </div>
-                        </div>
                         </article>
                         <h3>PUBLISHING</h3>
                         <article class="art dis-art pub">
@@ -1026,76 +1030,73 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <h4>할리스커피</h4>
-                                        <div class="hollys-itm">
-                                            <div class="img-box"><img src="./images/img-pub.png" alt="예시"></div>
+                                        <div class="pub-itm">
+                                            <div class="img-box"><img src="./images/pub-hollys.png" alt="할리스"></div>
                                             <ul>
                                                 <li>
                                                     <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        팀 프로젝트
+                                                        <br>
+                                                        제작기간:7일
                                                         <br>
                                                         <br>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        할리스커피 웹사이트를 HTML, CSS, jquery를<br>
+                                                        사용하여 클론코딩으로 작업했습니다.
+                                                        <br>
+                                                        <br>
+                                                        <br>
                                                     </p>
                                                 </li>
-                                                <li><img src="./images/ico-link.png" alt="링크1"></li>
-                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
-                                                <li><img src="./images/ico-link.png" alt="링크2"></li>
-                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                                <li><a href="https://chul0720.github.io/hollys/"><img src="./images/ico-link.png" alt="링크2"></a></li>
+                                                <li><a href="https://chul0720.github.io/hollys/">https://chul0720.github.io/hollys/</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <h4>한솔</h4>
-                                        <div class="hollys-itm">
-                                            <div class="img-box"><img src="./images/img-pub.png" alt="예시"></div>
+                                        <div class="pub-itm">
+                                            <div class="img-box"><img src="./images/pub-hansol.png" alt="한솔페이퍼"></div>
                                             <ul>
                                                 <li>
                                                     <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        팀 프로젝트
+                                                        <br>
+                                                        제작기간:7일
                                                         <br>
                                                         <br>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        한솔제지 웹사이트를 HTML, CSS, jquery를<br>
+                                                        사용하여 클론코딩으로 작업했습니다.
+                                                        <br>
+                                                        <br>
+                                                        <br>
                                                     </p>
                                                 </li>
-                                                <li><img src="./images/ico-link.png" alt="링크1"></li>
-                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
-                                                <li><img src="./images/ico-link.png" alt="링크2"></li>
-                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                                <li><a href="https://chul0720.github.io/hansol/"><img src="./images/ico-link.png" alt="링크2"></a></li>
+                                                <li><a href="https://chul0720.github.io/hansol/">https://chul0720.github.io/hansol/</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <h4>메가박스</h4>
-                                        <div class="hollys-itm">
-                                            <div class="img-box"><img src="./images/img-pub.png" alt="예시"></div>
+                                        <div class="pub-itm">
+                                            <div class="img-box"><img src="./images/pub-mega.png" alt="메가박스"></div>
                                             <ul>
                                                 <li>
                                                     <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        팀 프로젝트
+                                                        <br>
+                                                        제작기간:2주
                                                         <br>
                                                         <br>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptatibus.
+                                                        메가박스 웹사이트를 HTML, CSS, jquery를<br>
+                                                        사용하여 클론코딩으로 작업했습니다.
+                                                        <br>
+                                                        <br>
+                                                        <br>
                                                     </p>
                                                 </li>
-                                                <li><img src="./images/ico-link.png" alt="링크1"></li>
-                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
-                                                <li><img src="./images/ico-link.png" alt="링크2"></li>
-                                                <li><a href="#">https://www.hollys.co.kr/</a></li>
+                                                <li><a href="https://chul0720.github.io/megabox/"><img src="./images/ico-link.png" alt="링크2"></a></li>
+                                                <li><a href="https://chul0720.github.io/megabox/">https://chul0720.github.io/megabox/</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1219,27 +1220,16 @@
         });
 
         function fnPopOpen(item){
-        $('.popup-poster').eq(item).show();
+        $('.popup').eq(item).show();
         }
 
         $('.poster .item').click(function(){
             fnPopOpen($(this).index());
         })
         $('.btn-close').click(function(){
-            $('.popup-poster').hide();
+            $('.popup').hide();
         })
 
-
-        function fnPopOpen(item){
-        $('.popup-banner').eq(item).show();
-        }
-
-        $('.banner .item').click(function(){
-            fnPopOpen($(this).index());
-        })
-        $('.btn-close').click(function(){
-            $('.popup-banner').hide();
-        })
     </script>
 </body>
 </html>
